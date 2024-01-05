@@ -1,0 +1,17 @@
+[class*= "col"]{
+    padding: 1rem;
+    background-color: #33b5e5;
+    border: 2px solid black;
+    color: #fff;
+}
+body{
+    min-height: 100vh;
+    background: rgb(65,203,28);
+    background: linear-gradient(342deg, rgba(65,203,28,1) 20%, rgba(134,192,204,1) 100%);
+    background-size: cover;
+}
+.custom-container{
+    min-width: 300px;
+    min-height: 200px;
+    background: linear-gradient(342deg, rgba(65,203,28,1) 20%, rgba(134,192,204,1) 100%);
+}
