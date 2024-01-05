@@ -1,19 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Venkatesan's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        /*display: flex;*/
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        width: 100px;
+        height: 100%;
+        background-color: #f8f9fa;
+        background-color: transparent;
+        padding: 20px;
+      }
+
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+      .pic-top{
+        background-color: white;
+        height: 75%;
+        overflow: hidden;
+      }
+      .pic-bottom{
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      
+      .pic-top img{
+        width: 100%;
+        height: auto;
+        /* height: 100%; */
+      }
+      .icon-link {
+      /* position: absolute; */
+      color: white;
+      font-size: 24px;
+    }
+    </style>
   </head>
   <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus similique unde quibusdam iste dolorum explicabo? Repudiandae maxime cupiditate autem iusto.</div>
-            <div class="col-8"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque porro pariatur quidem debitis ipsum eius neque illo incidunt quod. Incidunt aliquam ipsam debitis nulla voluptatum harum labore voluptas. Quaerat blanditiis, doloribus rerum dolorem vel dolore! Quae, quos porro. Ratione, quam!</div>
+    <div class="container-fluid" style="display: flex; margin-top: 100px">
+      <div class="sidebar">
+        <button
+          class="btn btn-primary btn-block"
+          onclick="showContent('aboutMe')"
+        >
+        <i class="fa-solid fa-person"></i>
+        </button>
+        <button
+          class="btn btn-primary btn-block"
+          onclick="showContent('resume')"
+        >
+        <i class="fa-solid fa-file"></i>
+        </button>
+        <button
+          class="btn btn-primary btn-block"
+          onclick="showContent('work')"
+        >
+        <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row gx-0">
+            <!--Static Section-->
+          <div class="photo col-md-5">
+            <div class="pic-top">
+                <img src="mypic.jpg">
+            </div>
+            <div class="pic-bottom">
+                <a href="https://www.linkedin.com/in/venkatesan-2002-rs" class="icon-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.gmail.com" class="icon-link">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://www.facebook.com" class="icon-link">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="" class="icon-link">
+                    <i class="fa-solid fa-download"></i>
+                  </a>
+            </div>
+          </div>
+          <!--Section which is dynamic-->
+          <div class="content col-7">
+            <!--About Me Page-->
+            <div id="aboutMeContent">
+              <h2>About Me</h2>
+              <div class="row">
+                <div class="col">
+                    <p class="subhead-card"><b>Hello, I'm Venkatesan R S</b></p>
+                    <p class="desc-card">React Developer from Chennai, India. I have experience in React, Java and am also accustomed in Python. Currently working as a Intern in Adappt. </p>
+                </div>
+                <div class="col">
+                    <!--Insert table later-->
+                    <table class="table table-borderless">
+                        <tr><td><span class="badge text-bg-success">Age</span></td><td>21</td></tr>
+                        <tr><td><span class="badge text-bg-success">Residence</span></td><td>Chennai</td></tr>
+                        <tr><td><span class="badge text-bg-success">Nationality</span></td><td>Indian</td></tr>
+                      </table>
+                </div>
+              </div>
+              <!--MySkills-->
+              <h2>Skills</h2>
+              <div class="row">
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">React</p>
+                    <p class="desc-card">Familiar in concepts like Components, States, UseRef, Hooks, UseEffect and so on. Hands on personal project experience too.</p>
+                </div>
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">Java</p>
+                    <p class="desc-card">Familiar in concepts like JSP, Servlets, DAO, Tomcat, Maven and so on. Hands on personal project experience too.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">Python</p>
+                    <p class="desc-card">Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+                </div>
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">JavaScript</p>
+                    <p class="desc-card">JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS. </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">SQL</p>
+                    <p class="desc-card">Structured query language (SQL) is a programming language for storing and processing information in a relational database. A relational database stores information in tabular form, with rows and columns representing different data attributes and the various relationships between the data values.</p>
+                </div>
+                <div class="col-md-6 smol">
+                    <!--Add icon-->
+                    <p class="subhead-card">Git</p>
+                    <p class="desc-card">Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="resumeContent" class="hidden">
+              <h2>Resume</h2>
+              <p>This is my resume.</p>
+              <div class="row">
+                <div class="col-md-6">
+                    <h3>Education</h3>
+                    <div class="row">
+                        <div class="col">
+                            <h4>LMOIS</h4>
+                            <p class="subhead-card">High School</p>
+                            <p class="desc-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ratione necessitatibus dolore nisi quibusdam voluptas.</p>    
+                        </div></div>
+                    <div class="row"><div class="col"><h4>PSBBSSS</h4><p class="subhead-card">SSLC</p><p class="desc-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore architecto obcaecati vero odio excepturi deleniti corporis nihil quas necessitatibus sapiente.</p></div></div>
+                </div>
+                <div class="col-md-6"><h3>Experience</h3>
+                <div class="row"><div class="col"><h4>Adappt</h4><p class="subhead-card">React Intern</p><p class="desc-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore architecto obcaecati vero odio excepturi deleniti corporis nihil quas necessitatibus sapiente.</p></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="workContent" class="hidden">
+              <h2>Project Experience</h2>
+              <div class="row">
+                <div class="col-sm-12">
+                    <p class="subhead-card">Expense Tracker Application React</p>
+                    <p class="desc-card">Engineered an intuitive Expense Tracker web app with React JS, emphasizing React
+                        Components, Props, Hooks (UseState), and JSX. Noteworthy features include seamless expense recording and analysis, year-wise categorization, a unique non-refresh re-rendering mechanism leveraging state variables, and a CSS-driven chart graph which shows expense trends.
+                        </p>
+                </div>
+                <div class="col-sm-12">
+                    <p class="subhead-card">Timer Game React</p>
+                    <p class="desc-card">Developed an interactive web-based timer game using React JS, incorporating core concepts like
+                        React Components, Props, Hooks (UseState, UseRef), and JSX. The game, featuring four difficulty levels, enhances time management and concentration. Players must halt the countdown before it ends to win. Failure triggers a pop-up modal, while successful stops yield scores from 0-100, reflecting precise timing skills.
+                        </p>
+                </div>
+                <div class="col-sm-12">
+                    <p class="subhead-card">Car Service Management - JAVA</p>
+                    <p class="desc-card">Simplified car appointment bookings and mechanic reporting using Java, JSP, Servlets, DAO,
+                        MySQL, JDBC, HTML, and CSS. The user-friendly portal, designed for simplicity, facilitates customers with multiple cars to book appointments. Mechanics' reports are stored in the database, and users readily access all vehicle reports associated with their cars upon login, enhancing the overall customer experience.
+                        </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <script>
+      function showContent(contentType) {
+        // Hide all content
+        document.getElementById("aboutMeContent").classList.add("hidden");
+        document.getElementById("resumeContent").classList.add("hidden");
+        document.getElementById("workContent").classList.add("hidden");
+
+        // Show the selected content
+        document
+          .getElementById(contentType + "Content")
+          .classList.remove("hidden");
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/54a7f11736.js" crossorigin="anonymous"></script>
   </body>
 </html>
