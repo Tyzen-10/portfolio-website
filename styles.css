@@ -1,63 +1,284 @@
-[class*= "content"]{
-    box-sizing: border-box;
-    background-color: #33b5e5;
-    border: 2px solid white;
-    color: #fff;
-    min-height: 300px;
-    height: 75vh;
-    overflow-y: auto; /*reason why content's got a scroll bar*/
-    background-color: aliceblue;
-    color: black;
-    border-radius: 2px;
-    /* changing */
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+[class*="content"] {
+  box-sizing: border-box;
+  background-color: #33b5e5;
+  border: 2px solid white;
+  color: #fff;
+  min-height: 300px;
+  height: 75vh;
+  overflow-y: auto; /*reason why content's got a scroll bar*/
+  background-color: aliceblue;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  /* changing */
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
 }
-[class*= "photo"]{
-    box-sizing: border-box;
-    background-color: #33b5e5;
-    border: 2px solid white;
-    color: #fff;
-    min-height: 300px;
-    height: 75vh;
-    border-radius: 2px;
-    /*changing*/
-    height: 80vh;
-    box-shadow: 5px 5px 5px green;
-    padding-left: 0;
-    padding-right: 0;
+[class*="photo"] {
+  box-sizing: border-box;
+  background-color: #33b5e5;
+  background-color: white;
+  border: 2px solid white;
+  color: #fff;
+  min-height: 300px;
+  height: 75vh;
+  border-radius: 2px;
+  /*changing*/
+  height: 80vh;
+  box-shadow: 5px 5px 5px green;
+  padding-left: 0;
+  padding-right: 0;
 }
-body{
-    min-height: 100vh;
-    background: rgb(65,203,28);
-    background: linear-gradient(342deg, rgba(65,203,28,1) 20%, rgba(134,192,204,1) 100%);
-    background-size: cover;
+body {
+  min-height: 100vh;
+  background: rgb(65, 203, 28);
+  background: linear-gradient(
+    342deg,
+    rgba(65, 203, 28, 1) 20%,
+    rgba(134, 192, 204, 1) 100%
+  );
+  background-size: cover;
 }
-.smallbox{
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    border: 2px black solid;
-    margin: auto;
+.smallbox {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 2px black solid;
+  margin: auto;
 }
-.bottoms{
-    display: flex;
+.bottoms {
+  display: flex;
 }
 
-.subhead-card{
-    font-family: 'Open Sans', sans-serif;
+.subhead-card {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+.desc-card {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: grey;
+}
+.smol {
+  background-color: aliceblue;
+  background-color: white;
+  border-radius: 1px solid;
+}
+[class*="badge"] {
+  background-color: greenyellow;
+}
+/*from html*/
+body {
+  /*display: flex;*/
+  min-height: 100vh;
+}
+
+/* new sidebar styles*/
+.sidebar {
+  width: 65px;
+  height: auto;
+  background-color: white;
+  box-shadow: 2px 2px 5px green;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  /*   gap : 2rem; */
+  transition: width 1.3s ease;
+  margin-top: 10px;
+  border-radius: 3px;
+  display: none;
+}
+.sidebar button {
+  flex-basis: 25%;
+  width: auto;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid 0.1px lightgrey;
+  transition: background-color 0.3s ease;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.sidebar p {
+  margin: 0;
+  padding: 5px;
+  font-size: x-small;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 0px;
+}
+.sidebar i {
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: x-large;
+  font-size: large;
+}
+body {
+  background-color: lightgreen;
+}
+.sidebar button:hover {
+  color: lightgreen;
+}
+/*extra*/
+.menu-btn {
+  /* flex-basis: 20%; */
+  width: 65px;
+  border: none;
+  background-color: white;
+  border-bottom: solid 1px grey;
+  padding: 1px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
+  height: auto;
+}
+.menu-btn p {
+  margin: 0;
+  padding: 5px;
+  font-size: x-small;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+.menu-btn i {
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.content {
+  /* flex-grow: 1; */ /* is making content to grow bigger*/
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.pic-top {
+  background-color: white;
+  height: 75%;
+  overflow: hidden;
+  /* changes */
+  height: 50%;
+}
+.pic-bottom {
+  height: 25%;
+
+  /* changes */
+  height: 50%;
+  color: black;
+  /*changes*/
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* height: 50%; */
+  flex-basis: 75%;
+}
+.name p {
+  width: fit-content;
+  margin: auto;
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+.name h7 {
+  width: fit-content;
+  margin: auto;
+  color: lightgreen;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* height: 25%; */
+  flex-basis: 25%;
+}
+.twobuttons {
+  flex-basis: 25%;
+  /* height: 25%; */
+  display: flex;
+}
+.twobuttonschild {
+  flex-basis: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: black;
+  margin: auto;
+}
+
+.pic-top img {
+  width: 100%;
+  height: auto;
+  /* height: 100%; */
+  position: relative;
+  top: -50%;
+}
+.icon-link {
+  /* position: absolute; */
+  color: white;
+  color: black;
+  font-size: 24px;
+  /*changes*/
+  font-size: small;
+}
+.god {
+  display: flex;
+  flex-direction: column;
+}
+/*small green thing*/
+.year-card {
+  border-radius: 0px;
+  border: lightgreen 1px solid;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: lightgreen;
+  width: fit-content;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.year-card-2 {
+  border-radius: 0px;
+  border: lightgrey 1px solid;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: lightgrey;
+  width: fit-content;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+h2 {
+  font-size: larger;
+}
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: medium;
+}
+h4{
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
-    color: black;
+    font-size: medium;
 }
-.desc-card{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+.org-card{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
     color: grey;
-}
-.smol{
-    background-color: aliceblue;
-    border-radius: 1px solid ;
-}
-[class*= "badge"]{
-    background-color: greenyellow;
+    font-size: small;
+    font-size: 12px;
 }

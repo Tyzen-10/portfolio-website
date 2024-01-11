@@ -33,3 +33,17 @@
       </script>
   </body>
 </html>
+
+
+
+for year para el. use this
+
+padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 0px;
+  font-size: x-small;
+  border: lightgreen 2px solid;
+  maybe dont use bootstrap button.
+  
