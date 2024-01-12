@@ -6,12 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!--
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -102,10 +96,10 @@
           <div class="content col-md-8">
             <!--About Me Page-->
             <div id="aboutMeContent">
-              <h2>About Me</h2>
+              <h2><span class="firstletter">A</span>bout Me</h2>
               <div class="row">
                 <div class="col">
-                  <p class="subhead-card"><b>Hello, I'm Venkatesan RS</b></p>
+                  <p class="desc-card abt-name">Hello, I'm Venkatesan RS</p>
                   <p class="desc-card">
                     React Developer from Chennai, India. I have experience in
                     React, Java and am also accustomed in Python. Currently
@@ -116,18 +110,18 @@
                   <!--Insert table later-->
                   <table class="table table-borderless">
                     <tr>
-                      <td><span class="badge text-bg-success">Age</span></td>
+                      <td><span class="badge text-bg-success">Age:</span></td>
                       <td>21</td>
                     </tr>
                     <tr>
                       <td>
-                        <span class="badge text-bg-success">Residence</span>
+                        <span class="badge text-bg-success">Residence:</span>
                       </td>
                       <td>Chennai</td>
                     </tr>
                     <tr>
                       <td>
-                        <span class="badge text-bg-success">Nationality</span>
+                        <span class="badge text-bg-success">Nationality:</span>
                       </td>
                       <td>Indian</td>
                     </tr>
@@ -135,10 +129,10 @@
                 </div>
               </div>
               <!--MySkills-->
-              <h2>Skills</h2>
+              <h2><span class="firstletter">S</span>kills</h2>
               <div class="row">
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/react.svg" alt="REACT"></div>
                   <p class="subhead-card">React</p>
                   <p class="desc-card">
                     Familiar in concepts like Components, States, UseRef, Hooks,
@@ -147,7 +141,7 @@
                   </p>
                 </div>
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/java.svg" alt="JAVA"></div>
                   <p class="subhead-card">Java</p>
                   <p class="desc-card">
                     Familiar in concepts like JSP, Servlets, DAO, Tomcat, Maven
@@ -157,7 +151,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/python.svg" alt="PY"></div>
                   <p class="subhead-card">Python</p>
                   <p class="desc-card">
                     Python is a high-level, general-purpose programming
@@ -166,7 +160,7 @@
                   </p>
                 </div>
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/js.svg" alt="JS"></div>
                   <p class="subhead-card">JavaScript</p>
                   <p class="desc-card">
                     JavaScript, often abbreviated as JS, is a programming
@@ -177,7 +171,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/sql2.svg" alt="SQL"></div>
                   <p class="subhead-card">SQL</p>
                   <p class="desc-card">
                     Structured query language (SQL) is a programming language
@@ -189,7 +183,7 @@
                   </p>
                 </div>
                 <div class="col-md-6 smol">
-                  <!--Add icon-->
+                  <div class="icon-skill"><img src="skills/git.svg" alt="Git"></div>
                   <p class="subhead-card">Git</p>
                   <p class="desc-card">
                     Git is a distributed version control system that tracks
@@ -204,10 +198,13 @@
             </div>
 
             <div id="resumeContent" class="hidden">
-              <h2>Resume</h2>
+              <h2><span class="firstletter">R</span>esume</h2>
               <div class="row">
                 <div class="col-md-6">
-                  <h3>EDUCATION</h3>
+                  <div class="resume-head">
+                    <img src="skills/education.svg" alt="eduicon" style="display: inline;" class="resume-icon">
+                    <h3 style="display: inline;">EDUCATION</h3>
+                  </div>
                   <div class="row">
                     <div class="row">
                       <div class="col">
@@ -215,11 +212,13 @@
                         <h4>Engineering</h4>
                         <p class="org-card">REC</p>
                       </div>
-                      <div class="col">Icon here</div>
+                      <div class="col">
+                        <img src="rec logo.jpeg" alt="REC" class="org-logo" />
+                      </div>
                       <p class="desc-card">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Dolore architecto obcaecati vero odio excepturi
-                        deleniti corporis nihil quas necessitatibus sapiente.
+                        Enrolled in Computer Science Course. Learned key
+                        concepts that paved the way for a career in CS.
+                        Graduated in 2023.
                       </p>
                     </div>
                   </div>
@@ -228,20 +227,29 @@
                     <div class="row">
                       <div class="col">
                         <p class="year-card-2">2017 - 2019</p>
-                        <h4>SSLC</h4>
+                        <h4>HSC</h4>
                         <p class="org-card">LMOIS</p>
                       </div>
-                      <div class="col">Icon here</div>
+                      <div class="col">
+                        <img
+                          src="lalaji_memorial_omega_international_school_logo.jpeg"
+                          alt="LMOIS"
+                          class="org-logo"
+                        />
+                      </div>
                       <p class="desc-card">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Dolore architecto obcaecati vero odio excepturi
-                        deleniti corporis nihil quas necessitatibus sapiente.
+                        Enrolled in the Biology - Maths group during senior
+                        years at school. Later scored high grades in biology in
+                        the CBSE Board Exam. Passed out in 2019.
                       </p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <h3>EXPERIENCE</h3>
+                  <div class="resume-head">
+                    <img src="skills/exp.svg" alt="eduicon" style="display: inline;" class="resume-icon">
+                    <h3 style="display: inline;">EXPERIENCE</h3>
+                  </div>
                   <div class="row">
                     <div class="row">
                       <div class="col">
@@ -249,11 +257,16 @@
                         <h4>React Intern</h4>
                         <p class="org-card">Adappt</p>
                       </div>
-                      <div class="col">Icon here</div>
+                      <div class="col">
+                        <img
+                          src="adappt3.png"
+                          alt="Adappt logo"
+                          class="org-logo"
+                        />
+                      </div>
                       <p class="desc-card">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Dolore architecto obcaecati vero odio excepturi
-                        deleniti corporis nihil quas necessitatibus sapiente.
+                        Currently an Intern at Adappt Mobile Cloud Applications.
+                        Training to become a proficient React Developer.
                       </p>
                     </div>
                   </div>
@@ -262,7 +275,7 @@
             </div>
 
             <div id="workContent" class="hidden">
-              <h2>Project Experience</h2>
+              <h2><span class="firstletter">P</span>roject Experience</h2>
               <div class="row">
                 <div class="col-sm-12">
                   <p class="subhead-card">Expense Tracker Application React</p>
