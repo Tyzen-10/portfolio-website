@@ -49,7 +49,7 @@
             <i class="fa-regular fa-object-ungroup"></i>
             <p>WORKS</p>
           </button>
-          <button type="button">
+          <button type="button" onclick="showContent('contact')">
             <i class="fa-regular fa-envelope"></i>
             <p>CONTACT</p>
           </button>
@@ -317,7 +317,12 @@
                 </div>
               </div>
             </div>
+            <!--End of work content, add contact info below.-->
+            <div id="contactContent" class="hidden">
+              <h2><span class="firstletter">C</span>ontact Me</h2>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -328,6 +333,7 @@
         document.getElementById("aboutMeContent").classList.add("hidden");
         document.getElementById("resumeContent").classList.add("hidden");
         document.getElementById("workContent").classList.add("hidden");
+        document.getElementById("contactContent").classList.add("hidden");
 
         // Show the selected content
         document
@@ -346,11 +352,6 @@
         }
       }
     </script>
-    <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    -->
     <script
       src="https://kit.fontawesome.com/54a7f11736.js"
       crossorigin="anonymous"
